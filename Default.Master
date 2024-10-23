@@ -1,0 +1,170 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="EService.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Reference Control="~/wuc/ucAccountSettings.ascx" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="style/default.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="script/jquery.js"></script>
+    <script type="text/javascript" src="script/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script/jquery.uploadfile.min.js"></script>
+    <link href="Css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Css/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="Css/jquery-ui.theme.min.css" rel="stylesheet" />
+    <link href="Css/uploadfile.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .style1 {
+            text-align: left;
+        }
+
+        .style2 {
+            text-align: left;
+            font-size: 9pt;
+        }
+
+        .style3 {
+            background-color: #1f75d6;
+            color: #FFFFFF;
+            border: 2px solid #2069ba;
+            height: 49px;
+            font-style: italic;
+            font-size: xx-small;
+        }
+
+        .style4 {
+            color: #800000;
+        }
+
+        .style5 {
+            width: 200px;
+        }
+
+        .style6 {
+            width: 173px;
+        }
+
+        .Initial {
+            display: block;
+            padding: 4px 18px 4px 18px;
+            float: left;
+            background: url("Images/InitialImage.png") no-repeat right top;
+            color: Black;
+            font-weight: bold;
+        }
+
+            .Initial:hover {
+                color: White;
+                background: url("Images/SelectedButton.png") no-repeat right top;
+            }
+
+        .Clicked {
+            float: left;
+            display: block;
+            background: url("Images/SelectedButton.png") no-repeat right top;
+            padding: 4px 18px 4px 18px;
+            color: Black;
+            font-weight: bold;
+            color: White;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:HiddenField runat="server" ID="hidden_seltab" />
+        <div class="mainItem">
+            <div class="container">
+                <table cellpadding="0" cellspacing="0" class="content" id="TABLE1">
+                    <tr>
+                        <td colspan="3" valign="top" style="height: 15px; text-align: right;">
+                            <asp:PlaceHolder ID="phAccountSettings" runat="server"></asp:PlaceHolder>
+                        </td>
+                    </tr>
+                    <tr class="style1">
+                        <td class="header" colspan="3" valign="top"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <asp:PlaceHolder ID="phSubHeader" runat="server"></asp:PlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table cellpadding="0" cellspacing="0" width="width: 930px;">
+                                <tr>
+                                    <td class="leftclmn" valign="top">
+                                        <!--Return to User Account Homepage-->
+                                        <asp:PlaceHolder ID="phAccount" runat="server"></asp:PlaceHolder>
+                                        <!--gateway links-->
+                                        <asp:PlaceHolder ID="phGatewayLinks" runat="server"></asp:PlaceHolder>
+                                        <br />
+                                    </td>
+                                    <td class="centerclmn2" valign="top">
+                                        <%--<asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="8pt"
+                                            PathSeparator=" : " Visible="False">
+                                            <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                                            <CurrentNodeStyle ForeColor="#333333" />
+                                            <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                                            <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                                        </asp:SiteMapPath>
+                                        <br />
+                                        <asp:PlaceHolder ID="phEServiceIntroduction" runat="server"></asp:PlaceHolder>
+                                        <br />--%>
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="footer" colspan="3" align="center" valign="top">Copyright © 2009 Government of Seychelles | <a id="aTerms" href="http://eservice.egov.sc/public/TermsOfUse.aspx" runat="server" class="footer_links">Terms of Use</a> | <a id="aGateway" href="http://eservice.egov.sc/public/GatewayConcept.aspx" runat="server" class="footer_links">About E-Service Gateway</a> | <a id="aSitemap" href="http://eservice.egov.sc/public/Sitemap.aspx" runat="server" class="footer_links">Sitemap</a>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        //file upload
+        $(document).ready(function () {
+            $("#fileuploader").uploadFile({
+                url: "~/Files",
+                acceptFiles:"application/pdf",
+                multiple: false,
+                maxFileCount: 1,
+                fileName: "myfile"
+            });
+
+        //Tabs
+            $(function () {
+
+           <%--     var indexToSelect = 0;
+            var hdnSelectedTabIndex = $('#<%= hidden_selectedtab.ClientID %>')
+            var tabIndex = hdnSelectedTabIndex.val();
+
+            if (tabIndex != '') {
+                indexToSelect = tabIndex;
+            }--%>
+
+              //  $('#tabs').tabs(indexToSelect);
+             $("#tabs").tabs();
+
+             var currTab = $("#<%= hidden_seltab.ClientID %>").val();
+                $("#tabs").tabs({ selected: currTab });
+
+                //$("#tabs").bind("tabsselect", function (event, ui) {
+                //    var selectedIndex = ui.index;
+                //    $('#hidden_seltab').val(selectedIndex);
+                //});
+        });
+
+        });
+    </script>
+</body>
+</html>

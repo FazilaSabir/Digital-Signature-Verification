@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{487EC7B2-9F63-4A8E-B04F-9444FD71C5E4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EServiceTemplate</RootNamespace>
+    <AssemblyName>EServiceTemplate</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\ADManager.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\..\..\..\Users\fpatel\Downloads\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EService.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\EService.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EService.ServiceAgent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Ict.Ad.Security, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Ict.Ad.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Itc.EntitySearch.ServiceAgent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="SeygovEService.ServiceAgent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\SeygovEService.ServiceAgent.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\EService.DAL.dll" />
+    <Content Include="Css\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Css\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Css\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Css\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Css\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Css\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Css\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Css\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Css\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Css\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Css\jquery-ui.css" />
+    <Content Include="Css\jquery-ui.min.css" />
+    <Content Include="Css\jquery-ui.structure.css" />
+    <Content Include="Css\jquery-ui.structure.min.css" />
+    <Content Include="Css\jquery-ui.theme.min.css" />
+    <Content Include="Css\uploadfile.css" />
+    <Content Include="Dll\ADManager.dll" />
+    <Content Include="Dll\EService.BLL.dll" />
+    <Content Include="Dll\EService.DAL.dll" />
+    <Content Include="Dll\EService.ServiceAgent.dll" />
+    <Content Include="Dll\Ict.Ad.Security.dll" />
+    <Content Include="Dll\Ict.Utility.dll" />
+    <Content Include="Dll\Itc.EntitySearch.ServiceAgent.dll" />
+    <Content Include="Dll\Itc.Security.DAL.dll" />
+    <Content Include="Dll\Itc.Security.dll" />
+    <Content Include="Dll\Itc.Security.UI.dll" />
+    <Content Include="Dll\itextsharp.dll" />
+    <Content Include="Dll\SeygovEService.ServiceAgent.dll" />
+    <Content Include="Dll\SRCIS_ServiceAgent.dll" />
+    <Content Include="Dll\Tech.Utility.dll" />
+    <Content Include="Home.aspx" />
+    <Content Include="Home1.aspx" />
+    <Content Include="images\agent.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\button_download.png" />
+    <Content Include="images\crest-small.png" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\header1.jpg" />
+    <Content Include="images\header2_01.jpg" />
+    <Content Include="images\header2_02.jpg" />
+    <Content Include="images\header2_03.jpg" />
+    <Content Include="images\ind.jpg" />
+    <Content Include="images\InitialImage.png" />
+    <Content Include="images\loginbk.jpg" />
+    <Content Include="images\main.jpg" />
+    <Content Include="images\main_agent.jpg" />
+    <Content Include="images\main_org.jpg" />
+    <Content Include="images\org.jpg" />
+    <Content Include="images\rss.png" />
+    <Content Include="images\searchPeople.bmp" />
+    <Content Include="images\SelectedButton.png" />
+    <Content Include="images\subbanner_bk.jpg" />
+    <Content Include="images\titlebluebk.jpg" />
+    <Content Include="images\titleGreenbk.jpg" />
+    <Content Include="images\titleRedbk.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="script\jquery-ui.js" />
+    <Content Include="script\jquery-ui.min.js" />
+    <Content Include="script\jquery.js" />
+    <Content Include="script\jquery.uploadfile.min.js" />
+    <Content Include="VerifySubscription.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\SignedDocument.cs" />
+    <Compile Include="DAL\Ds_SignedDocs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_SignedDocs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Files\empty.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home1.aspx.cs">
+      <DependentUpon>Home1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home1.aspx.designer.cs">
+      <DependentUpon>Home1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSV.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Utility\Common.cs" />
+    <Compile Include="Utility\SessionSink.cs" />
+    <Compile Include="VerifySubscription.aspx.cs">
+      <DependentUpon>VerifySubscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerifySubscription.aspx.designer.cs">
+      <DependentUpon>VerifySubscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wuc\ucAccount.ascx.cs">
+      <DependentUpon>ucAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wuc\ucAccount.ascx.designer.cs">
+      <DependentUpon>ucAccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wuc\ucAccountSettings.ascx.cs">
+      <DependentUpon>ucAccountSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wuc\ucAccountSettings.ascx.designer.cs">
+      <DependentUpon>ucAccountSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wuc\ucGatewayLinks.ascx.cs">
+      <DependentUpon>ucGatewayLinks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wuc\ucGatewayLinks.ascx.designer.cs">
+      <DependentUpon>ucGatewayLinks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wuc\ucOrgUserSettings.ascx.cs">
+      <DependentUpon>ucOrgUserSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wuc\ucOrgUserSettings.ascx.designer.cs">
+      <DependentUpon>ucOrgUserSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wuc\ucSubHeader.ascx.cs">
+      <DependentUpon>ucSubHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wuc\ucSubHeader.ascx.designer.cs">
+      <DependentUpon>ucSubHeader.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\EService.ServiceAgent.dll" />
+    <Content Include="bin\Itc.EntitySearch.ServiceAgent.dll" />
+    <Content Include="bin\SeygovEService.ServiceAgent.dll" />
+    <Content Include="bin\SRCIS_ServiceAgent.dll" />
+    <Content Include="default.aspx" />
+    <Content Include="Default.Master" />
+    <Content Include="images\header3.jpg" />
+    <Content Include="images\myaccount2.jpg" />
+    <Content Include="style\default.css" />
+    <Content Include="wuc\ucAccount.ascx" />
+    <Content Include="wuc\ucAccountSettings.ascx" />
+    <Content Include="wuc\ucGatewayLinks.ascx" />
+    <Content Include="wuc\ucOrgUserSettings.ascx" />
+    <Content Include="wuc\ucSubHeader.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Ds_SignedDocs.xsc">
+      <DependentUpon>Ds_SignedDocs.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\Ds_SignedDocs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_SignedDocs.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\Ds_SignedDocs.xss">
+      <DependentUpon>Ds_SignedDocs.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reports\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\DSV.pubxml" />
+    <None Include="Reports\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Reports\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reports\DSV.xsc">
+      <DependentUpon>DSV.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\DSV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSV.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Reports\DSV.xss">
+      <DependentUpon>DSV.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\DSV.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Reports\Report1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Report2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55100</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/EServiceTemplate</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
